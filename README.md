@@ -1,3 +1,5 @@
+# installer-script
+
 create separate scripts (i.e. minimum setup, full setup, etc.)
 
 update package manager
