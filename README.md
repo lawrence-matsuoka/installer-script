@@ -4,6 +4,9 @@ create separate scripts (i.e. minimum setup, full setup, etc.)
 
 should use maybe xubuntu 22.04 or 22.xx with i3 install
 
+xfce + i3 install
+make compatible with kali linux? (based on debian with xfce)
+
 update package manager
 set up git credentials
 set up syncthing
