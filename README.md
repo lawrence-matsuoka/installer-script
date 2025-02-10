@@ -1,6 +1,7 @@
 # installer-script
 
 create separate scripts (i.e. minimum setup, full setup, etc.)
+if statement to select minimal install or full install
 
 should use maybe xubuntu 22.04 or 22.xx with i3 install
 
