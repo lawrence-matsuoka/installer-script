@@ -2,18 +2,23 @@
 # ask user for their name
 
 # update packages
-sudo apt update && apt upgrade
+sudo apt update && apt upgrade -y
 
 # install git and curl
-sudo apt install git curl
+sudo apt install git curl -y
 
 # create credentials for git
 
 # multi-user installation for Nix
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
+nix-channel
+nix-channel --update
+home-manager switch
+nix-collect-garbage -d
+
 # install, enable, and start syncthing
-sudo apt install syncthing
+sudo apt install syncthing -y
 sudo systemctl enable syncthing@$USER
 sudo systemctl start syncthing@$USER
 
