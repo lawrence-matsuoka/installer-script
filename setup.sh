@@ -12,8 +12,10 @@ sudo apt install git curl -y
 # multi-user installation for Nix
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
-nix-channel
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz
+nix-channel --add https://nixos.org/channels/nixpkgs-unstable
 nix-channel --update
+nix-shell '<home-manager>' -A install
 home-manager switch
 nix-collect-garbage -d
 
