@@ -6,7 +6,41 @@ sudo apt update && apt upgrade -y
 # install git and curl
 sudo apt install git curl -y
 
-# create credentials for git
+# https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+# Generate a new SSH key
+ssh-keygen -t ed25519 -C "Lawrence.Matsuoka@proton.me"
+
+# Start the SSH agent in the background
+eval "$(ssh-agent -s)"
+
+# Add the SSH private key to the ssh-agent
+ssh-add ~/.ssh/id_ed25519
+
+# https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+# Print out the public key 
+cat ~/.ssh/id_ed25519.pub
+
+echo Select and copy the contents of the id_ed25519.pub file displayed above
+# Add SSH key in Github browser
+
+# Create credentials for git
+cd ~/.config/home-manager
+
+touch home.nix
+
+fill with this
+{ config, pkgs, ... }:
+
+{
+  programs.git = {
+    enable = true;
+    userName = "lawrence"
+    userEmail = "Lawrence.Matsuoka@proton.me";
+    extraConfig = {
+      github.user = "lawrence-matsuoka";
+    };
+  };
+}
 
 # multi-user installation for Nix
 sh <(curl -L https://nixos.org/nix/install) --daemon
