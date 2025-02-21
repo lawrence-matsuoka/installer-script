@@ -79,6 +79,10 @@ cd
 # orcaslicer
 
 
+# virt-manager
+# kali linux vm 
+curl kali-linux-vm
+
  
 # ask user for their name
 echo Hello, what is your name?
