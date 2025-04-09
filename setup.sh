@@ -8,6 +8,7 @@ sudo apt install git curl -y
 
 # https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 # Generate a new SSH key
+# make user input instead
 ssh-keygen -t ed25519 -C "Lawrence.Matsuoka@proton.me"
 
 # Start the SSH agent in the background
@@ -71,16 +72,17 @@ git clone repo with dotfiles
 cd
 
 # stm32cubeide
-
+curl
 
 # code composer studio
-
+curl
 
 # orcaslicer
-
+curl # from source at github
 
 # virt-manager
 # kali linux vm 
+# or qemu
 curl kali-linux-vm
 
  

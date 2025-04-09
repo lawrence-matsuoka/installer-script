@@ -1,5 +1,9 @@
 # installer-script
 
+## Prerequisites
+- Preferably Xubuntu 22.04
+- git
+
 create separate scripts (i.e. minimum setup, full setup, etc.)
 if statement to select minimal install or full install
 
